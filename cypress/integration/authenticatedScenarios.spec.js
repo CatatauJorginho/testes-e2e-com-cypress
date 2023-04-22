@@ -34,7 +34,7 @@ describe('Scenarios where authentication is a pre-requirement', () => {
   it.only('logs out', () => {
     cy.visit('/')
     cy.wait('@getNotes')
-   
+
     if (Cypress.config('viewportWidth') < Cypress.env('viewportWidthBreakpoint')) {
       cy.get('.navbar-toggle.collapsed')
         .should('be.visible')
@@ -43,7 +43,7 @@ describe('Scenarios where authentication is a pre-requirement', () => {
 
     cy.get('.nav > :nth-child(2) > a').click()
     cy.get('#email').should('be.visible')
-    
+
   })
 })
 
